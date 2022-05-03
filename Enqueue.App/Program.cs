@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Producer;
 
@@ -17,7 +15,7 @@ const int numOfEvents = 3;
 var producerClient = new EventHubProducerClient(connectionString, eventHubName);
 
 // Create a batch of events 
-using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
+using var eventBatch = await producerClient.CreateBatchAsync();
 
 for (int i = 1; i <= numOfEvents; i++)
 {

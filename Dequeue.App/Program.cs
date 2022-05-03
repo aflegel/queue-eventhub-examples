@@ -1,10 +1,6 @@
-﻿using System;
-using System.Text;
-using System.Threading.Tasks;
-using Azure.Storage.Blobs;
+﻿using Azure.Storage.Blobs;
 using Azure.Messaging.EventHubs;
 using Azure.Messaging.EventHubs.Consumer;
-using Azure.Messaging.EventHubs.Processor;
 using Dequeue.App;
 
 const string ehubNamespaceConnectionString = "<EVENT HUBS NAMESPACE - CONNECTION STRING>";
